@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from typing import Union
 
-from app.routers import auth, abouts, contacts
+from app.routers import auth, abouts, contacts, experiences, projects, skills, tools, trainings
 
 app = FastAPI(title='Portfolio Elvis Houssou API')
 
@@ -18,6 +18,8 @@ app.add_middleware(
 app.include_router(auth.router)
 app.include_router(abouts.router)
 app.include_router(contacts.router)
-# app.include_router(experiences.router)
-# app.include_router(projects.router)
-# app.include_router(skills.router)
+app.include_router(experiences.router)
+app.include_router(projects.router)
+app.include_router(skills.router)
+app.include_router(tools.router)
+app.include_router(trainings.router)

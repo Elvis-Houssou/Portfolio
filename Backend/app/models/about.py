@@ -1,5 +1,6 @@
 from sqlmodel import SQLModel, Field
 from typing import Optional
+from datetime import datetime, date
 
 class AboutCreate(SQLModel):
     profile_image: Optional[str] = None
@@ -39,8 +40,10 @@ class About(SQLModel, table=True):
     job_title_en: Optional[str] = None
     description_fr: Optional[str] = None
     description_en: Optional[str] = None
-    created_at: Optional[str] = Field(default=None, index=True)
-    updated_at: Optional[str] = Field(default=None, index=True)
+    
+    created_at: Optional[datetime] = Field(default=None, index=True)
+    updated_at: Optional[datetime] = Field(default=None, index=True)
+
 
     def __repr__(self):
         return f"About(id={self.id}, name={self.name}, version={self.version})"

@@ -23,7 +23,7 @@ def get_contact(db: DbDependency):
     return contact
 
 @router.post("/create", response_model=Contact, status_code=status.HTTP_201_CREATED)
-def create_contact(contact_data: Annotated[ContactCreate, Depends()], db: DbDependency):
+def create_contact(contact_data: ContactCreate, db: DbDependency):
     """Crée une nouvelle section 'Contact'."""
     contact = Contact.from_orm(contact_data)
     db.add(contact)
@@ -42,7 +42,7 @@ def create_contact(contact_data: Annotated[ContactCreate, Depends()], db: DbDepe
         raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="An error occurred while creating contact")
     
 @router.put("/update/{contact_id}", response_model=Contact, status_code=status.HTTP_200_OK)
-def update_contact(contact_id: int, contact_data: Annotated[ContactCreate, Depends()], db: DbDependency):
+def update_contact(contact_id: int, contact_data: ContactCreate, db: DbDependency):
     """Met à jour les informations de la section 'Contact'."""
     contact = db.query(Contact).filter(Contact.id == contact_id).first()
     if not contact:

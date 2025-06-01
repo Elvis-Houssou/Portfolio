@@ -23,7 +23,7 @@ def get_about(db: DbDependency):
     return about
 
 @router.post("/create", response_model=About, status_code=status.HTTP_201_CREATED)
-def create_about(about_data: Annotated[AboutCreate, Depends()], db: DbDependency):
+def create_about(about_data: AboutCreate, db: DbDependency):
     """Crée une nouvelle section 'About'."""
     about = About.from_orm(about_data)
     about.password = bcrypt_context.hash(about.password) if about.password else None
@@ -43,7 +43,7 @@ def create_about(about_data: Annotated[AboutCreate, Depends()], db: DbDependency
         raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="An error occurred while creating about")
 
 @router.put("/update/{about_id}", response_model=About, status_code=status.HTTP_200_OK)
-def update_about(about_id: int, about_data: Annotated[AboutCreate, Depends()], db: DbDependency):
+def update_about(about_id: int, about_data: AboutCreate, db: DbDependency):
     """Met à jour les informations de la section 'About'."""
     about = db.query(About).filter(About.id == about_id).first()
     if not about:
