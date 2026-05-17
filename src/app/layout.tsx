@@ -8,7 +8,8 @@ const inter = Inter({
   variable: '--font-inter'
 });
 
-const BASE_URL = "https://elvishoussou.dev"
+const BASE_URL = "https://portfolio-jpwl-dxo227ah9-elvishoussou.vercel.app/"
+// const BASE_URL = "https://elvishoussou.dev"
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
