@@ -1,36 +1,36 @@
 import { ProjectProps, TimelineItemProps } from "@/props";
-import { Code2, Database, Globe, Hammer } from "lucide-react";
+import { Code2, Database, Github, Globe, Hammer, Linkedin, Mail, MessageCircle, Phone } from "lucide-react";
 
 export const projects: ProjectProps[] = [
-  {
-    title: "EMETIS — Plateforme de réservation",
-    description:
-      "Plateforme web full-stack de réservation de résidences meublées en Côte d'Ivoire. Authentification, calendrier de disponibilité, paiement en ligne et espace propriétaire.",
-    longDescription:
-      "Développement d'une application web complète de type Airbnb pour le marché ivoirien. Le backend Laravel/Node.js gère l'authentification des utilisateurs, la logique de réservation avec vérification des disponibilités en temps réel, et l'intégration d'une API de paiement. Les fichiers et images sont hébergés sur Amazon S3, le cache de sessions est géré via Redis, et les données sont modélisées dans PostgreSQL (users, properties, bookings, availability). Le frontend React offre une interface de recherche par localisation et critères, ainsi qu'un espace propriétaire pour la gestion des annonces.",
-    technologies: ["React", "Node.js", "Laravel", "API de Paiement", "PostgreSQL", "Amazon S3", "Redis"],
-    link: "https://emetis.net/",
-    github: null,
-    featured: true,
-    images: [
-      "/images/emetis-home.jpg",
-      "/images/emetis-search.jpg",
-    ],
-    highlights: [
-      "Authentification sécurisée et gestion des rôles (hôte / voyageur)",
-      "Système de réservation avec vérification des disponibilités en temps réel",
-      "Intégration d'une API de paiement pour les transactions en ligne",
-      "Stockage des médias sur Amazon S3 et cache de sessions via Redis",
-      "Modélisation relationnelle PostgreSQL : users, properties, bookings, availability",
-    ],
-  },
+  // {
+  //   title: "EMETIS — Plateforme de réservation",
+  //   description:
+  //     "Plateforme web full-stack de réservation de résidences meublées en Côte d'Ivoire. Authentification, calendrier de disponibilité, paiement en ligne et espace propriétaire.",
+  //   longDescription:
+  //     "Développement d'une application web complète de type Airbnb pour le marché ivoirien. Le backend Laravel/Node.js gère l'authentification des utilisateurs, la logique de réservation avec vérification des disponibilités en temps réel, et l'intégration d'une API de paiement. Les fichiers et images sont hébergés sur Amazon S3, le cache de sessions est géré via Redis, et les données sont modélisées dans PostgreSQL (users, properties, bookings, availability). Le frontend React offre une interface de recherche par localisation et critères, ainsi qu'un espace propriétaire pour la gestion des annonces.",
+  //   technologies: ["React", "Node.js", "Laravel", "API de Paiement", "PostgreSQL", "Amazon S3", "Redis"],
+  //   link: "https://emetis.net/",
+  //   github: null,
+  //   featured: true,
+  //   images: [
+  //     "/images/emetis-home.jpg",
+  //     "/images/emetis-search.jpg",
+  //   ],
+  //   highlights: [
+  //     "Authentification sécurisée et gestion des rôles (hôte / voyageur)",
+  //     "Système de réservation avec vérification des disponibilités en temps réel",
+  //     "Intégration d'une API de paiement pour les transactions en ligne",
+  //     "Stockage des médias sur Amazon S3 et cache de sessions via Redis",
+  //     "Modélisation relationnelle PostgreSQL : users, properties, bookings, availability",
+  //   ],
+  // },
   {
     title: "Les Pépinières",
     description:
       "Site web vitrine et catalogue pour un réseau de pépinières. Moteur de filtrage multicritères, rendu optimisé côté serveur et SEO soigné.",
     longDescription:
       "Développement d'un site web orienté front-end pour la présentation et l'exploration d'un catalogue horticole. Construit avec Next.js (SSR/SSG) pour des performances de rendu optimales et un bon référencement naturel. Le projet met en avant un moteur de filtrage multicritères côté client, des composants React réutilisables et une interface responsive soignée. Les données du catalogue sont gérées de manière statique ou via un CMS headless sans backend applicatif custom.",
-    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
     link: "https://www.lespepinieres.com/",
     github: null,
     featured: true,
@@ -88,8 +88,8 @@ export const projects: ProjectProps[] = [
     description:
       "Site corporate pour une agence internationale de transformation digitale. Présentation des services, gestion de leads et catalogue de solutions B2B multi-pays.",
     longDescription:
-      "Développement du site web corporate d'Africa Digitalizer, agence opérant au Canada, en Côte d'Ivoire et au Bénin. Le site présente l'écosystème de solutions B2B de l'agence (développement web, Cloud, DevOps, IoT) et intègre un formulaire de collecte de leads et de demandes de devis. Projet front-end TypeScript / React sans backend transactionnel complexe, axé sur la communication de l'expertise de l'agence.",
-    technologies: ["TypeScript", "React"],
+      "Développement du site web corporate d'Africa Digitalizer, agence opérant au Canada, en Côte d'Ivoire et au Bénin. Le site présente l'écosystème de solutions B2B de l'agence (développement web, Cloud, DevOps, IoT) et intègre un formulaire de collecte de leads et de demandes de devis. Projet front-end TypeScript / Next.js avec internationalisation (next-intl), axé sur la communication de l'expertise de l'agence.",
+    technologies: ["TypeScript", "Next.js", "next-intl"],
     link: "https://africadigitalizer.com/",
     github: null,
     featured: false,
@@ -98,7 +98,8 @@ export const projects: ProjectProps[] = [
       "Site corporate multi-pays (Canada, Côte d'Ivoire, Bénin)",
       "Catalogue de services et solutions B2B",
       "Formulaire de collecte de leads et de demandes de devis",
-      "Interface performante en TypeScript / React",
+      "Interface performante en TypeScript / Next.js",
+      "Internationalisation complète du site (FR / EN) avec next-intl"
     ],
   },
   {
@@ -332,4 +333,12 @@ export const faqs = [
     answer:
       "Vous pouvez me contacter par email à houssouelvis@gmail.com ou par téléphone au +225 0554987943. Vous pouvez également utiliser le formulaire de contact ci-dessous. Je réponds généralement sous 24 heures.",
   },
+]
+
+export const contacts = [
+  { id: 'email',    label: 'Email',    href: 'mailto:houssouelvis@gmail.com',       icon: Mail,          color: 'from-orange-500 to-red-500',    shadow: 'shadow-orange-500/30' },
+  { id: 'phone',    label: 'Tel',      href: 'tel:+2250554987943',                  icon: Phone,         color: 'from-green-500 to-emerald-500', shadow: 'shadow-green-500/30'  },
+  { id: 'whatsapp', label: 'WhatsApp', href: 'https://wa.me/2250554987943',         icon: MessageCircle, color: 'from-teal-400 to-green-500',    shadow: 'shadow-teal-500/30'   },
+  { id: 'linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com/in/elvis-houssou-228056231/', icon: Linkedin,    color: 'from-blue-600 to-blue-400',     shadow: 'shadow-blue-500/30'   },
+  { id: 'github',   label: 'GitHub',   href: 'https://github.com/Elvis-Houssou',   icon: Github,        color: 'from-zinc-700 to-zinc-500',     shadow: 'shadow-zinc-500/30'   },
 ]

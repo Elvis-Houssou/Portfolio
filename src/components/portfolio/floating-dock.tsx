@@ -2,15 +2,9 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence, useSpring, useTransform, useMotionValue } from 'framer-motion'
-import { Mail, Phone, Github, Linkedin, MessageCircle } from 'lucide-react'
+import { contacts } from '@/data/moks'
 
-const contacts = [
-  { id: 'email',    label: 'Email',    href: 'mailto:houssouelvis@gmail.com',       icon: Mail,          color: 'from-orange-500 to-red-500',    shadow: 'shadow-orange-500/30' },
-  { id: 'phone',    label: 'Tel',      href: 'tel:+2250554987943',                  icon: Phone,         color: 'from-green-500 to-emerald-500', shadow: 'shadow-green-500/30'  },
-  { id: 'whatsapp', label: 'WhatsApp', href: 'https://wa.me/2250554987943',         icon: MessageCircle, color: 'from-teal-400 to-green-500',    shadow: 'shadow-teal-500/30'   },
-  { id: 'linkedin', label: 'LinkedIn', href: 'https://linkedin.com/in/elvis-houssou', icon: Linkedin,    color: 'from-blue-600 to-blue-400',     shadow: 'shadow-blue-500/30'   },
-  { id: 'github',   label: 'GitHub',   href: 'https://github.com/Elvis-Houssou',   icon: Github,        color: 'from-zinc-700 to-zinc-500',     shadow: 'shadow-zinc-500/30'   },
-]
+
 
 // ─── Desktop item: magnification on mouseY ──────────────────────────────────
 function DockItemDesktop({
@@ -125,7 +119,8 @@ export function FloatingDock() {
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: 40 }}
         transition={{ type: 'spring', stiffness: 280, damping: 26, delay: 0.4 }}
-        className="fixed right-2 top-1/2 -translate-y-1/2 z-30"
+        className="fixed right-2 z-30"
+        style={{ top: "50%", y: "-50%" }}
       >
         <div className="flex flex-col items-center gap-2 px-2 py-3 rounded-2xl bg-background/80 backdrop-blur-xl border border-border shadow-xl">
           {contacts.map((c) => (
@@ -145,7 +140,8 @@ export function FloatingDock() {
       transition={{ type: 'spring', stiffness: 300, damping: 30, delay: 0.5 }}
       onMouseMove={(e) => mouseY.set(e.clientY)}
       onMouseLeave={() => mouseY.set(Infinity)}
-      className="fixed bottom-6 left-1/2 -translate-x-1/2 z-30"
+      className="fixed bottom-6 z-30"
+      style={{ left: "50%", x: "-50%" }}
     >
       <div className="flex items-center gap-3 px-5 py-3 rounded-3xl bg-background/75 backdrop-blur-xl border border-border shadow-2xl">
         {contacts.map((contact) => (

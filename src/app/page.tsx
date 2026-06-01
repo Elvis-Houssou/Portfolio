@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main>
+      <main className="w-full">
         <Hero />
         <About />
         <Skills />

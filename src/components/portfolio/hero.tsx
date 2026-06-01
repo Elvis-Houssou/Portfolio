@@ -9,7 +9,7 @@ export function Hero() {
   const [flipped, setFlipped] = useState(false)
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center pt-20 pb-12 px-4 lg:pl-28">
+    <section id="hero" className="w-full min-h-screen flex items-center justify-center pt-20 pb-12 px-4">
       <div className="container mx-auto max-w-6xl">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}

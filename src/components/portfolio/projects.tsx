@@ -192,7 +192,7 @@ export function Projects() {
   const [selectedProject, setSelectedProject] = useState<ProjectProps | null>(null)
 
   return (
-    <section id="projects" className="py-20 px-4 bg-card">
+    <section id="projects" className="w-full py-20 px-4 bg-card">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <p className="text-primary font-medium mb-2 text-sm tracking-wide uppercase">

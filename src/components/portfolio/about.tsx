@@ -2,7 +2,7 @@ import { User, MapPin, Calendar, Briefcase } from "lucide-react"
 
 export function About() {
   return (
-    <section id="about" className="py-20 px-4 lg:pl-28 bg-card">
+    <section id="about" className="w-full py-20 px-4 bg-card">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <p className="text-primary font-medium mb-2 text-sm tracking-wide uppercase">

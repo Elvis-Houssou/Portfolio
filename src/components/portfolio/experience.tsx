@@ -40,18 +40,32 @@ function TimelineCard({ item, index, isLeft }: { item: TimelineItemProps, index:
               )}
             </div>
             <div className="flex-1 min-w-0">
-              <div className="flex items-start justify-between gap-2">
+              {/* Desktop: title + period inline */}
+              <div className="hidden md:flex items-start justify-between gap-2">
                 <h4 className="font-bold text-foreground group-hover:text-primary transition-colors text-sm leading-tight">
                   {item.title}
                 </h4>
                 <span className={`text-[10px] font-semibold px-2 py-1 rounded-full whitespace-nowrap flex-shrink-0 ${
-                  isEducation 
-                    ? 'bg-blue-500/10 text-blue-600 dark:text-blue-400' 
+                  isEducation
+                    ? 'bg-blue-500/10 text-blue-600 dark:text-blue-400'
                     : 'bg-primary/10 text-primary'
                 }`}>
                   {item.period}
                 </span>
               </div>
+
+              {/* Mobile: title alone, period below as a small pill */}
+              <h4 className="md:hidden font-bold text-foreground group-hover:text-primary transition-colors text-sm leading-tight">
+                {item.title}
+              </h4>
+              <span className={`md:hidden inline-flex items-center text-[10px] font-semibold px-2 py-0.5 rounded-full mt-1 ${
+                isEducation
+                  ? 'bg-blue-500/10 text-blue-600 dark:text-blue-400'
+                  : 'bg-primary/10 text-primary'
+              }`}>
+                {item.period}
+              </span>
+
               <p className="text-xs text-muted-foreground flex items-center gap-1 mt-1">
                 <MapPin size={10} className={isEducation ? 'text-blue-500' : 'text-primary'} />
                 {item.subtitle} - {item.location}

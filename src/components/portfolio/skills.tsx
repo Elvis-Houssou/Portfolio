@@ -11,7 +11,7 @@ export function Skills() {
   const currentCategory = Object.entries(skills).find(([key]) => key === activeCategory)?.[1]
 
   return (
-    <section id="skills" className="py-20 px-4">
+    <section id="skills" className="w-full py-20 px-4">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <p className="text-primary font-medium mb-2 text-sm tracking-wide uppercase">

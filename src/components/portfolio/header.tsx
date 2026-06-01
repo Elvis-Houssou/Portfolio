@@ -31,7 +31,7 @@ function DiagonalTooltip({ label, visible }: { label: string; visible: boolean }
       {visible && (
         <motion.div
           className="absolute z-50 pointer-events-none"
-          style={{ bottom: "calc(100% + 6px)", right: "calc(100% + 6px)" }}
+          style={{ bottom: 20, right: "calc(100% + 6px)" }}
           initial={{ opacity: 0, x: 8, y: 8 }}
           animate={{ opacity: 1, x: 0, y: 0 }}
           exit={{ opacity: 0, x: 8, y: 8 }}
@@ -78,8 +78,8 @@ export function Header() {
         transition={{ delay: 0.2, type: "spring", stiffness: 200, damping: 24 }}
       >
         {/* Logo */}
-        <div className="flex justify-center pt-6 pb-3 px-4">
-          <a href="#" className="text-xl font-bold text-foreground">
+        <div className="flex justify-center pt-4 pb-2 px-4">
+          <a href="#" className="text-sm font-bold text-foreground">
             Elvis<span className="text-primary">.</span>
           </a>
         </div>
@@ -87,7 +87,7 @@ export function Header() {
         <div className="w-9 h-px bg-border mx-auto my-1" />
 
         {/* Nav Links */}
-        <div className="flex flex-col py-3">
+        <div className="flex flex-col py-2">
           {navItems.map((item) => {
             const Icon = item.icon
             const sectionId = item.href.replace("#", "")
