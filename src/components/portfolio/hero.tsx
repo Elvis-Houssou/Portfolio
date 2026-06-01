@@ -73,7 +73,7 @@ export function Hero() {
                 <Github size={20} />
               </a>
               <a
-                href="https://linkedin.com/in/elvis-houssou"
+                href="https://www.linkedin.com/in/elvis-houssou-228056231/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors"

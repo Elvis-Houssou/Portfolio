@@ -119,7 +119,7 @@ const jsonLd = {
     addressCountry: "CI",
   },
   sameAs: [
-    "https://linkedin.com/in/elvis-houssou",
+    "https://www.linkedin.com/in/elvis-houssou-228056231/",
     "https://github.com/Elvis-Houssou",
   ],
   knowsAbout: ["React", "Next.js", "Laravel", "FastAPI", "Python", "PostgreSQL"],

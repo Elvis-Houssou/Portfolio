@@ -46,7 +46,7 @@ const contacts = [
     id: 'linkedin',
     label: 'LinkedIn',
     value: 'elvis-houssou',
-    href: 'https://linkedin.com/in/elvis-houssou',
+    href: 'https://www.linkedin.com/in/elvis-houssou-228056231/',
     icon: Linkedin,
     action: 'open' as const,
     color: 'from-blue-600 to-blue-400',
