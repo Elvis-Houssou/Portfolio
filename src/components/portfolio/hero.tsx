@@ -116,7 +116,7 @@ export function Hero() {
                   style={{ backfaceVisibility: 'hidden' }}
                 >
                   <Image
-                    src="/images/elvis-houssou.jpeg"
+                    src="/images/elvis-houssou.png"
                     alt="Elvis Houssou - Développeur Software & Data Engineer"
                     fill
                     className="object-cover object-top"
