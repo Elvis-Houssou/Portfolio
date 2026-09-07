@@ -48,24 +48,6 @@ export const projects: ProjectProps[] = [
     ],
   },
   {
-    title: "Possible Immobilier",
-    description:
-      "Site vitrine immobilier avec back-office CMS pour une agence opérant en Côte d'Ivoire et sur la Côte d'Azur. Gestion de catalogue, cartes interactives et SEO.",
-    longDescription:
-      "Développement d'un site web professionnel pour une agence immobilière de prestige. Le client peut gérer son catalogue de biens (ajout, modification, suppression) via un back-office CMS intégré sans intervention technique. Le site intègre une carte interactive (Google Maps ou équivalent) pour la géolocalisation des biens, un système de filtrage du catalogue, et une optimisation SEO ciblant le marché immobilier francophone. Projet front-end Next.js avec back-office, sans logique transactionnelle complexe.",
-    technologies: ["React", "Next.js", "Tailwind CSS", "CMS"],
-    link: "https://www.possible-immobilier.com/",
-    github: null,
-    featured: false,
-    images: [],
-    highlights: [
-      "Back-office CMS pour la gestion autonome du catalogue de biens",
-      "Intégration de cartes interactives pour la géolocalisation des propriétés",
-      "Filtrage dynamique du catalogue de biens",
-      "Optimisation SEO pour le marché immobilier francophone",
-    ],
-  },
-  {
     title: "Portail APÉTS (ÉTS Montréal)",
     description:
       "Portail institutionnel pour l'association professorale de l'ÉTS Montréal. Gestion de documents officiels, publication d'actualités et espace membres avec rôles.",
@@ -81,6 +63,24 @@ export const projects: ProjectProps[] = [
       "Mise à disposition et gestion de documents PDF officiels",
       "Publication et gestion d'actualités syndicales",
       "Accessibilité web et conformité aux standards institutionnels",
+    ],
+  },
+  {
+    title: "Possible Immobilier",
+    description:
+      "Site vitrine immobilier avec back-office CMS pour une agence opérant en Côte d'Ivoire et sur la Côte d'Azur. Gestion de catalogue, cartes interactives et SEO.",
+    longDescription:
+      "Développement d'un site web professionnel pour une agence immobilière de prestige. Le client peut gérer son catalogue de biens (ajout, modification, suppression) via un back-office CMS intégré sans intervention technique. Le site intègre une carte interactive (Google Maps ou équivalent) pour la géolocalisation des biens, un système de filtrage du catalogue, et une optimisation SEO ciblant le marché immobilier francophone. Projet front-end Next.js avec back-office, sans logique transactionnelle complexe.",
+    technologies: ["React", "Next.js", "Tailwind CSS", "CMS"],
+    link: "https://www.possible-immobilier.com/",
+    github: null,
+    featured: false,
+    images: [],
+    highlights: [
+      "Back-office CMS pour la gestion autonome du catalogue de biens",
+      "Intégration de cartes interactives pour la géolocalisation des propriétés",
+      "Filtrage dynamique du catalogue de biens",
+      "Optimisation SEO pour le marché immobilier francophone",
     ],
   },
   {
