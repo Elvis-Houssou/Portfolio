@@ -31,7 +31,7 @@ export const projects: ProjectProps[] = [
     longDescription:
       "Développement d'un site web orienté front-end pour la présentation et l'exploration d'un catalogue horticole. Construit avec Next.js (SSR/SSG) pour des performances de rendu optimales et un bon référencement naturel. Le projet met en avant un moteur de filtrage multicritères côté client, des composants React réutilisables et une interface responsive soignée. Les données du catalogue sont gérées de manière statique ou via un CMS headless sans backend applicatif custom.",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-    link: "https://www.lespepinieres.com/",
+    link: "https://www.xn--lespepinires-5db.com/",
     github: null,
     featured: true,
     images: [
