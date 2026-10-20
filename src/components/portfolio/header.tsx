@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Home, User, Briefcase, Code, GraduationCap, HelpCircle, Mail } from "lucide-react"
+import { Home, User, Briefcase, Code, GraduationCap } from "lucide-react"
 import Image from "next/image"
 
 const navItems = [

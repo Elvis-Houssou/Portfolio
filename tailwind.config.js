@@ -101,7 +101,7 @@ module.exports = {
   		// 	}
   		// },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
         serif: ['Georgia', 'serif'],
         mono: ['Monaco', 'Consolas', 'monospace'],
       },
@@ -134,5 +134,6 @@ module.exports = {
       },
   	}
   },
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
   plugins: [require("tailwindcss-animate")],
 }

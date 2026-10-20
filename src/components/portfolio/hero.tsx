@@ -57,7 +57,7 @@ export function Hero() {
                 <a href="#projects">Voir mes projets</a>
               </Button>
               <Button asChild variant="outline" size="lg" className="rounded-full">
-                <a href="#contact">Me contacter</a>
+                <a href="#footer">Me contacter</a>
               </Button>
             </div>
 

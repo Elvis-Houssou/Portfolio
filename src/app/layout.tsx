@@ -68,14 +68,7 @@ export const metadata: Metadata = {
     title: "Elvis Houssou — Développeur Full-Stack & Software Engineer",
     description:
       "Applications web complètes, APIs performantes et architectures robustes. Basé à Abidjan, disponible en remote.",
-    images: [
-      {
-        url: "/og-image.png", // ← crée une image 1200x630px avec ton nom + titre
-        width: 1200,
-        height: 630,
-        alt: "Elvis Houssou — Développeur Full-Stack & Software Engineer",
-      },
-    ],
+    // Image générée par src/app/opengraph-image.tsx
   },
  
   // Twitter / X Card
@@ -84,20 +77,12 @@ export const metadata: Metadata = {
     title: "Elvis Houssou — Développeur Full-Stack & Software Engineer",
     description:
       "Applications web complètes, APIs performantes et architectures robustes. Basé à Abidjan, disponible en remote.",
-    images: ["/og-image.png"],
+    // Image générée par src/app/twitter-image.tsx
     // creator: "@tonhandle", // ← ajoute si tu as un compte X
   },
- 
-  // Icônes
-  icons: {
-    icon: [
-      { url: "/icon-light-32x32.png", media: "(prefers-color-scheme: light)" },
-      { url: "/icon-dark-32x32.png",  media: "(prefers-color-scheme: dark)" },
-      { url: "/icon.svg", type: "image/svg+xml" },
-    ],
-    apple: "/apple-icon.png",
-  },
- 
+
+  // Icônes : src/app/icon.png et src/app/apple-icon.png (détectées automatiquement par Next.js)
+
   // Ne pas exposer l'outil utilisé pour construire le site
   // generator supprimé volontairement
 }
@@ -134,6 +119,10 @@ export default function RootLayout({
   return (
     <html lang="fr" className="bg-background">
       <body className={`${inter.variable} font-sans antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
+        />
         <TooltipProvider>
           {children}
         </TooltipProvider>

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Code2, Database, Hammer, Globe, ChevronRight } from 'lucide-react'
+import { ChevronRight } from 'lucide-react'
 import { skills } from '@/data/moks'
 
 const allSkills = Object.values(skills).flatMap(cat => cat.items.map(item => item.name))
