@@ -66,41 +66,21 @@ export const projects: ProjectProps[] = [
     ],
   },
   {
-    title: "CGLA-Pro — Gestion de lavages auto",
+    title: "Soon Horizons",
     description:
-      "Application SaaS de gestion de stations de lavage : employés, offres et abonnements, suivi des lavages et des stocks, rôles et permissions. FastAPI + Next.js.",
+      "Site vitrine bilingue (FR / EN) pour une marque d'architecture, design et construction. Animations soignées, SEO et routage internationalisé avec Next.js.",
     longDescription:
-      "Logiciel de gestion destiné aux gérants de stations de lavage automobile. L'API FastAPI couvre l'authentification JWT, la gestion des utilisateurs et de leurs permissions, des stations, des employés, des offres et avantages, des abonnements, des enregistrements de lavage, ainsi que la gestion des stocks avec historique des mouvements et des quotas par gérant. Les données sont modélisées avec SQLModel / SQLAlchemy sur PostgreSQL et versionnées avec Alembic. Le tableau de bord Next.js s'appuie sur Redux Toolkit pour l'état global, React Hook Form et Zod pour les formulaires validés, et des composants Radix UI.",
-    technologies: ["FastAPI", "Next.js", "TypeScript", "Redux Toolkit", "PostgreSQL", "SQLModel", "JWT"],
-    link: null,
-    github: "https://github.com/Elvis-Houssou/CGLA-PRO",
-    featured: true,
-    images: [],
+      "Site de présentation des projets d'architecture de la marque Soon Horizons (villas, immeubles, bâtiments publics), destiné à une clientèle internationale. Construit avec Next.js (App Router) et un routage par langue, il met en scène les projets avec des animations Motion et un défilement fluide Lenis. Le site génère son sitemap et son robots.txt pour le référencement, et centralise toutes les prises de contact vers un canal unique de la marque.",
+    technologies: ["Next.js", "TypeScript", "Motion", "i18n"],
+    link: "https://soon-horizons.vercel.app",
+    github: "https://github.com/Elvis-Houssou/Soon-Horizons",
+    featured: false,
+    images: ["/images/soon-horizons-home.png"],
     highlights: [
-      "API REST modulaire : une douzaine de domaines métier (stations, employés, offres, abonnements, stocks…)",
-      "Authentification JWT et gestion des rôles et permissions par compte",
-      "Gestion des stocks avec historique des mouvements",
-      "Tableau de bord Next.js avec Redux Toolkit, React Hook Form et Zod",
-      "Schéma PostgreSQL versionné avec Alembic",
-    ],
-  },
-  {
-    title: "AZ Chat — Messagerie d'entreprise",
-    description:
-      "Messagerie en temps réel multi-entreprises : conversations privées et de groupe, partage de fichiers, notifications push. Laravel, WebSockets et Next.js.",
-    longDescription:
-      "Plateforme de messagerie interne pour les entreprises, organisée en trois services. Une API Laravel sécurisée par JWT gère les sociétés, les employés, les conversations privées et de groupe, les messages, les accusés de lecture et les pièces jointes. Le temps réel repose sur Laravel Reverb / Pusher et sur un serveur Node.js (Express, Socket.io, Redis) dédié aux événements instantanés. Le frontend Next.js consomme ces canaux via Laravel Echo et Socket.io, charge les anciens messages par pagination et envoie des notifications push avec OneSignal.",
-    technologies: ["Laravel", "Next.js", "TypeScript", "Socket.io", "Redis", "WebSockets", "JWT"],
-    link: null,
-    github: "https://github.com/Elvis-Houssou/az-chat",
-    featured: true,
-    images: [],
-    highlights: [
-      "Architecture à trois services : API Laravel, serveur temps réel Node.js, frontend Next.js",
-      "Messagerie instantanée via WebSockets (Laravel Reverb / Pusher, Socket.io + Redis)",
-      "Conversations privées et de groupe, accusés de lecture, partage de fichiers",
-      "Comptes multi-entreprises avec sélection de la société au login",
-      "Notifications push avec OneSignal",
+      "Site bilingue FR / EN avec routage par langue",
+      "Animations Motion et défilement fluide Lenis",
+      "SEO : sitemap et robots.txt générés",
+      "Contenu structuré et typé, validé avec Zod",
     ],
   },
   {
@@ -124,24 +104,6 @@ export const projects: ProjectProps[] = [
       "Optimisation SEO et Core Web Vitals",
       "Composants React réutilisables en TypeScript",
       "Interface responsive et accessible sur mobile",
-    ],
-  },
-  {
-    title: "Soon Horizons",
-    description:
-      "Site vitrine bilingue (FR / EN) pour une marque d'architecture, design et construction. Animations soignées, SEO et routage internationalisé avec Next.js.",
-    longDescription:
-      "Site de présentation des projets d'architecture de la marque Soon Horizons (villas, immeubles, bâtiments publics), destiné à une clientèle internationale. Construit avec Next.js (App Router) et un routage par langue, il met en scène les projets avec des animations Motion et un défilement fluide Lenis. Le site génère son sitemap et son robots.txt pour le référencement, et centralise toutes les prises de contact vers un canal unique de la marque.",
-    technologies: ["Next.js", "TypeScript", "Motion", "i18n"],
-    link: "https://soon-horizons.vercel.app",
-    github: "https://github.com/Elvis-Houssou/Soon-Horizons",
-    featured: false,
-    images: ["/images/soon-horizons-home.png"],
-    highlights: [
-      "Site bilingue FR / EN avec routage par langue",
-      "Animations Motion et défilement fluide Lenis",
-      "SEO : sitemap et robots.txt générés",
-      "Contenu structuré et typé, validé avec Zod",
     ],
   },
   {
@@ -234,24 +196,6 @@ export const projects: ProjectProps[] = [
       "Tableau de bord admin : suivi des commandes et des inventaires",
       "Schéma transactionnel PostgreSQL : produits, commandes, stocks, mouvements",
       "Interface utilisateur responsive et intuitive",
-    ],
-  },
-  {
-    title: "SOS Us — Application d'alerte",
-    description:
-      "Application mobile Flutter d'alerte et d'assistance : signalement géolocalisé, zones à risque, aide aux victimes de violences. Firebase et Google Maps.",
-    longDescription:
-      "Application mobile multiplateforme développée avec Flutter pour envoyer des alertes et obtenir de l'aide rapidement. L'utilisateur s'authentifie via Firebase Auth, déclenche une alerte géolocalisée, consulte les zones à risque sur une carte Google Maps et accède à des services d'aide, notamment pour les femmes victimes de violences. Les données sont stockées dans Cloud Firestore et les photos jointes aux signalements dans Firebase Storage.",
-    technologies: ["Flutter", "Dart", "Firebase", "Google Maps"],
-    link: null,
-    github: "https://github.com/Elvis-Houssou/Sos_Us",
-    featured: false,
-    images: [],
-    highlights: [
-      "Application mobile multiplateforme (Android / iOS) en Flutter",
-      "Alertes géolocalisées et carte des zones à risque (Google Maps, Geolocator)",
-      "Authentification, base de données et stockage de photos avec Firebase",
-      "Espace d'aide dédié aux victimes de violences",
     ],
   },
   {
