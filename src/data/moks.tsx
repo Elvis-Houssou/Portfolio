@@ -25,6 +25,28 @@ export const projects: ProjectProps[] = [
   //   ],
   // },
   {
+    title: "Soon Inventory — Fiches d'expédition",
+    description:
+      "Application hors ligne (PWA) pour créer des fiches d'expédition import-export : conteneurs, marchandises, calcul automatique des cartons et du tonnage, export Excel et PDF.",
+    longDescription:
+      "Application pensée pour des importateurs et exportateurs peu à l'aise avec Excel. Un assistant en étapes guide la création d'une expédition : informations générales, un ou plusieurs conteneurs, marchandises choisies dans un catalogue de produits, puis vérification. Les cartons et le tonnage sont calculés automatiquement, et la fiche est exportée en Excel ou en PDF. L'application fonctionne hors ligne : les données sont enregistrées sur l'appareil dans IndexedDB (Dexie), un service worker met l'interface en cache, et un moteur de synchronisation envoie les changements à l'API FastAPI dès que la connexion revient. Le backend (SQLAlchemy, Alembic, PostgreSQL) gère les comptes avec Argon2 et JWT. Frontend Next.js déployé sur Vercel, API sur Render.",
+    technologies: ["Next.js", "TypeScript", "FastAPI", "PostgreSQL", "Dexie (IndexedDB)", "PWA", "Vitest"],
+    link: "https://soon-inventory-beryl.vercel.app",
+    github: "https://github.com/Elvis-Houssou/Soon-Inventory",
+    featured: true,
+    images: [
+      "/images/soon-inventory-home.png",
+      "/images/soon-inventory-produits.png",
+    ],
+    highlights: [
+      "Fonctionne hors ligne : données locales IndexedDB et synchronisation avec l'API",
+      "Assistant de création d'expédition en étapes, avec plusieurs conteneurs",
+      "Calcul automatique des cartons et du tonnage à partir du catalogue produits",
+      "Export des fiches en Excel (ExcelJS) et en PDF (jsPDF)",
+      "Logique métier testée avec Vitest (poids, expéditions, synchronisation, documents)",
+    ],
+  },
+  {
     title: "Soon Finance",
     description:
       "Plateforme bilingue (FR / EN) qui répartit un revenu en enveloppes selon six méthodes budgétaires, dans 12 devises. Backend FastAPI, frontend Next.js, tests et CI complets.",
@@ -34,7 +56,7 @@ export const projects: ProjectProps[] = [
     link: "https://soon-finance.vercel.app",
     github: "https://github.com/Elvis-Houssou/Soon-Finance",
     featured: true,
-    images: [],
+    images: ["/images/soon-finance-home.png"],
     highlights: [
       "Simulateur de répartition : six méthodes budgétaires et 12 devises",
       "Architecture backend en couches : API, domaine métier, schémas, base de données",
@@ -114,12 +136,30 @@ export const projects: ProjectProps[] = [
     link: "https://soon-horizons.vercel.app",
     github: "https://github.com/Elvis-Houssou/Soon-Horizons",
     featured: false,
-    images: [],
+    images: ["/images/soon-horizons-home.png"],
     highlights: [
       "Site bilingue FR / EN avec routage par langue",
       "Animations Motion et défilement fluide Lenis",
       "SEO : sitemap et robots.txt générés",
       "Contenu structuré et typé, validé avec Zod",
+    ],
+  },
+  {
+    title: "BabyConnect",
+    description:
+      "Site d'annonce de naissance avec confirmation de présence des invités et espace d'administration. Next.js côté site, FastAPI côté API.",
+    longDescription:
+      "Site événementiel pour annoncer l'arrivée d'un bébé et organiser la venue des proches. La page d'accueil animée présente l'annonce, l'histoire des parents et un formulaire de confirmation de présence. Un espace d'administration protégé par connexion permet de consulter la liste des invités. L'API FastAPI gère les invités et les comptes administrateurs, avec authentification JWT, jetons de rafraîchissement stockés en cookies et migrations Alembic. Le frontend Next.js utilise Tailwind CSS, des composants Radix UI et Framer Motion.",
+    technologies: ["Next.js", "TypeScript", "FastAPI", "SQLAlchemy", "JWT", "Tailwind CSS"],
+    link: "https://baby-connect-alpha.vercel.app",
+    github: "https://github.com/Elvis-Houssou/BabyConnect",
+    featured: false,
+    images: ["/images/babyconnect-home.png"],
+    highlights: [
+      "Page d'annonce animée avec Framer Motion",
+      "Formulaire de confirmation de présence pour les invités",
+      "Tableau de bord administrateur avec la liste des invités",
+      "Authentification JWT avec jetons de rafraîchissement en cookies",
     ],
   },
   {
