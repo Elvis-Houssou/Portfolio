@@ -25,6 +25,30 @@ export const projects: ProjectProps[] = [
   //   ],
   // },
   {
+    title: "Soon Trade — Plateforme B2B de sourcing",
+    description:
+      "Plateforme B2B de sourcing et d'intermédiation commerciale : demandes d'achat, consultation des fournisseurs, propositions, commandes et livraisons, avec trois espaces (acheteur, fournisseur, équipe interne). FastAPI + Next.js.",
+    longDescription:
+      "Plateforme qui gère tout le parcours d'un achat B2B, de la demande à la livraison. L'acheteur décrit son besoin ; l'équipe SOON TRADE qualifie la demande, recherche des fournisseurs dans les catalogues, leur envoie des sollicitations et compare les offres reçues. Elle construit ensuite une proposition avec marge, validée par une seconde personne, que l'acheteur accepte, refuse ou fait modifier. La commande passe alors en bons fournisseurs, puis en suivi logistique jusqu'à la confirmation de réception, avec gestion des réclamations. L'application comprend aussi une messagerie avec notes internes, des notifications, un CRM, des tableaux de bord et un journal d'audit. Le backend FastAPI est découpé en modules métier (SQLAlchemy, Alembic, PostgreSQL) avec cloisonnement par organisation et permissions par rôle ; les documents sont stockés sur un stockage S3 privé. Le frontend Next.js est disponible en français, anglais et allemand, en thème clair et sombre. Déploiement Vercel (site), Render (API) et Neon (base). Le module de paiement est en attente.",
+    technologies: ["FastAPI", "Next.js", "TypeScript", "PostgreSQL", "SQLAlchemy", "Stockage S3", "next-intl", "GitHub Actions"],
+    link: "https://soon-trade.vercel.app",
+    github: "https://github.com/Elvis-Houssou/Soon-Trade",
+    featured: true,
+    images: [
+      "/images/soon-trade-home.png",
+      "/images/soon-trade-admin.webp",
+      "/images/soon-trade-acheteur.png",
+      "/images/soon-trade-connexion.png",
+    ],
+    highlights: [
+      "Parcours complet : demande, sourcing, offres fournisseurs, proposition, commande, livraison, réclamation",
+      "Trois espaces séparés : acheteur, fournisseur et équipe interne",
+      "Cloisonnement par organisation, permissions par rôle et journal d'audit",
+      "Site trilingue (FR / EN / DE) avec thèmes clair et sombre",
+      "279 tests backend, CI GitHub Actions (lint, typage, tests, audit des dépendances)",
+    ],
+  },
+  {
     title: "Soon Inventory — Fiches d'expédition",
     description:
       "Application hors ligne (PWA) pour créer des fiches d'expédition import-export : conteneurs, marchandises, calcul automatique des cartons et du tonnage, export Excel et PDF.",
